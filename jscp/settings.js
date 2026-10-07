@@ -351,11 +351,12 @@ function applyLoadedSettings() {
 
 }
 
-settingsButton.addEventListener('click', () => {
-    settingsModal.style.display = 'block';
-    populateModal();
-});
-
+if (settingsButton) {
+    settingsButton.addEventListener('click', () => {
+        settingsModal.style.display = 'block';
+        populateModal();
+    });
+}
 closeModal.addEventListener('click', () => {
     settingsModal.style.display = 'none';
     stopMusicPreview();
